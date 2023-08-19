@@ -35,11 +35,9 @@ axios.get<Pic[]>("https://frontend-gallery.darkube.app/api/photos").then((res)=>
 /////////
 useEffect(()=>{
   axios.get<string[]>("https://frontend-gallery.darkube.app/api/categories").then((result)=>setCategories(result.data)).catch((error)=>{seterror(error.massage);})
-  },[selectedCategory]);
+  },[]);
 
-  useEffect(()=>{
-    axios.get<string[]>("https://frontend-gallery.darkube.app/api/categories").then((result)=>setCategories(result.data)).catch((error)=>{seterror(error.massage);})
-    },[]);
+
 
 
     useEffect(()=>{
